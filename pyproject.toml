@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hm_infer"
+version = "1.0.0"
+description = "Hindley Milner type inference (Algorithm J with levels, plus a reference Algorithm W) for a small ML, with exhaustiveness checking and an evaluator"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = []
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[project.scripts]
+hm = "hm.__main__:main"
+
+[tool.setuptools]
+packages = ["hm"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
